@@ -1,0 +1,48 @@
+# This file uses what's called the YAML format.
+# Comments begin with the number sign, like these lines do.
+
+# Additionally, indentation is important.
+# Try to match the number of spaces at the beginning of each line.
+
+# At 0 spaces, you'll be specifying the name of your own character.
+# At 2 spaces, you'll be specifying the target of the greeting, usually the
+#              name of someone else's character.
+# At 4 spaces, you'll be listing all the greetings to randomly choose from for
+#              that target.
+
+# Here's an example:
+
+Your.Name:
+  __default:
+    # Default greetings go here.
+    # If the target has no custom greets, a line will be picked from this list.
+    # You can have as few or as many lines as you want for any target.
+    - "Aloha!"
+    - "How's it going?"
+
+  __miss:
+    # If your greet does not land on anybody, a line will be chosen from here.
+    # This list is optional, and if omitted, a greeting will be chosen from
+    # your __default list.
+    - "Hello World!"
+    - "Have we met before?"
+
+  Friend.Name:
+    # You're not limited to 40 characters per greeting, but exercise common
+    # sense and try not to go overboard.
+    - "You need my help?"
+    - "This isn't my first rodeo, you know."
+
+# If you have multiple characters, you can just start a new section for them.
+# If your character does not have an entry in here, then the module will not
+# do anything and your greetings assigned in game will be used.
+
+Other.Alt:
+  __default:
+    # If you want to use a quotation mark ( " ) anywhere in your greeting,
+    # you'll need to put a backslash ( \ ) in front of it.
+    - "Your face is \"strange\". Is it always like that?"
+
+    # If you want to put a backslash in your greeting, you'll need to put
+    # another one in front of it.
+    - "\\o/"

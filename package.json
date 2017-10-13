@@ -1,0 +1,11 @@
+{
+  "name": "greetings",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "js-yaml": "^3.6.1"
+  },
+  "author": "meishu",
+  "license": "MIT"
+}
